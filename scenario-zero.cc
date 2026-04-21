@@ -163,7 +163,7 @@ static ns3::GlobalValue
     g_hoSinrDifference ("hoSinrDifference",
                         "The value for which an handover between MmWave eNB is triggered",
                         ns3::DoubleValue (3), ns3::MakeDoubleChecker<double> ());
-//adding extra anomaly scenario
+//adding extra anomaly these 2 scenario 
 static ns3::GlobalValue
     g_hysteresis ("hysteresis",
                   "Hysteresis for A3-RSRP handover algorithm (dB)",
@@ -259,7 +259,8 @@ main (int argc, char *argv[])
   bool enableE2FileLogging = booleanValue.Get ();
   GlobalValue::GetValueByName ("numberOfRaPreambles", uintegerValue);
   uint8_t numberOfRaPreambles = uintegerValue.Get ();
-  
+
+  //adding extra anomaly these 2 scenario
   GlobalValue::GetValueByName ("hysteresis", doubleValue);
   double hysteresis = doubleValue.Get ();
 
@@ -363,7 +364,7 @@ main (int argc, char *argv[])
   Config::SetDefault ("ns3::LteEnbRrc::OutageThreshold", DoubleValue (outageThreshold));
   Config::SetDefault ("ns3::LteEnbRrc::SecondaryCellHandoverMode", StringValue (handoverMode));
   Config::SetDefault ("ns3::LteEnbRrc::HoSinrDifference", DoubleValue (hoSinrDifference));
-  //adding extra anomaly scenario
+  //adding extra anomaly these 2 scenario
   Config::SetDefault ("ns3::A3RsrpHandoverAlgorithm::Hysteresis", DoubleValue (hysteresis));
   Config::SetDefault ("ns3::A3RsrpHandoverAlgorithm::TimeToTrigger", TimeValue (MilliSeconds (TimeToTrigger)));
 
