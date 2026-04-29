@@ -314,7 +314,6 @@ If you only want a quick internal demo without real traces, the synthetic path i
 
 ```bash
 python3 -m ns_oran_intent_selector.pipeline
-python3 -m ns_oran_intent_selector.demo
 ```
 
 This is a fallback only.
