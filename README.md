@@ -1,5 +1,19 @@
 # ns-O-RAN Telemetry-Driven Handover Diagnosis
 
+Project Overview
+This project studies handover misconfiguration in ns-O-RAN using real simulator telemetry and an intent-based model selection workflow. The main idea is to collect raw handover traces from ns-3 / ns-O-RAN, convert them into handover-window KPI features, train a small catalog of lightweight models, and then select the most suitable model according to the operator’s intent.
+
+The project focuses on one exp1 handover scenario where hoSinrDifference is changed between the normal and anomaly runs. The raw traces are extracted from CellIdStats.txt, CellIdStatsHandover.txt, and DlE2PdcpStats.txt, then converted into CSV files and KPI summaries. Four models are trained on the same feature set: Random Forest, Gradient Boosting, Logistic Regression, and SVM. Their metrics are stored in a model catalog, and a rule-based selector recommends the best model based on intent such as high accuracy, low latency, or interpretability.
+
+The reported pipeline is telemetry-driven and rule-based. Optional LLM helpers exist in the package, but they are not part of the main evaluated path.
+
+Setup Instructions
+Requirements
+Python 3.10+
+pip install -r requirements.txt
+ns-3 / ns-O-RAN experiment environment
+Docker for the RIC stack
+
 This repository is the local analysis companion for a real **ns-O-RAN handover** study.
 
 The main idea is simple:
