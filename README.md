@@ -1,4 +1,4 @@
-# ns-O-RAN Telemetry-Driven Handover Diagnosis
+# Intent-Based Model Selection for Anomaly Detection using ns-O-RAN
 
 ## Project Overview
 This project studies handover misconfiguration in ns-O-RAN using real simulator telemetry and an intent-based model selection workflow. The main idea is to collect raw handover traces from ns-3 / ns-O-RAN, convert them into handover-window KPI features, train a small catalog of lightweight models, and then select the most suitable model according to the operator’s intent.
