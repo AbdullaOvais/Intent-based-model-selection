@@ -306,7 +306,7 @@ Example:
 python3 select_exp1_model_by_intent.py \
   --catalog "./exp/model_catalog.json" \
   --index "./exp/model_index.json" \
-  --intent "Detect handover misconfiguration with high accuracy"
+  --intent "select the model for Detecting handover misconfiguration with high accuracy"
 ```
 ```bash
 python3 select_exp1_model_by_intent.py \
