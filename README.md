@@ -304,20 +304,20 @@ Example:
 
 ```bash
 python3 select_exp1_model_by_intent.py \
-  --catalog ../exp1_hosinr/model_catalog.json \
-  --index ../exp1_hosinr/model_index.json \
-  --intent "Detect handover misconfiguration with high accuracy"
+  --catalog "./exp/model_catalog.json" \
+  --index "./exp/model_index.json" \
+  --intent "Detect handover misconfiguration with high accuracy""
 ```
 ```bash
 python3 select_exp1_model_by_intent.py \
-  --catalog ../exp1_hosinr/model_catalog.json \
-  --index ../exp1_hosinr/model_index.json \
+  --catalog "./exp/model_catalog.json" \
+  --index "./exp/model_index.json" \
   --intent "Need low latency for live inference"
 ```
 ```bash
 python3 select_exp1_model_by_intent.py \
-  --catalog ../exp1_hosinr/model_catalog.json \
-  --index ../exp1_hosinr/model_index.json \
+  --catalog "./exp/model_catalog.json" \
+  --index "./exp/model_index.json" \
   --intent "Use a simple interpretable baseline model"
 ```
 
